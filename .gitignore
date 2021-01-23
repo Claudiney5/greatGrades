@@ -1,0 +1,10 @@
+# created by virtualenv automatically
+__pycache__/
+.vscode
+/bin
+/lib
+git_key.*
+git_key
+key*
+pyvenv.cfg
+data.json
