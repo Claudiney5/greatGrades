@@ -1,24 +1,21 @@
 from flask import Flask, jsonify, request, redirect, url_for
 
-from Controllers.grades import answers, approval, student_average_grade
+from Controllers.grades import approval, student_average_grade
 
 app = Flask(__name__)
 
 
-@app.route("/", methods={'GET', ' POST'})
+@app.route("/", methods=['GET'])
 def final_grades():
-    course = request.json['course'] 
     templates = request.json['templates']  
     values = request.json['values']  
-    students = request.json['students']
+    students = request.json['students']    
 
-    print(students)
+    return jsonify({'approved': student_average_grade(students, templates, values)})
 
-    return "Página inicial", 200
 
-@app.route("/documentation", methods=['get'])
+@app.route("/documentation", methods=['GET'])
 def examination():
-    
     return
     
 

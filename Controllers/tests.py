@@ -1,14 +1,8 @@
 import unittest
-from grades import answers, approval, student_average_grade
+from grades import approval, student_average_grade
 
 
 class gradesTests(unittest.TestCase):
-    
-    def test_answers(self):
-        self.assertEqual(
-            answers(["Napoleão"], ["a", "b", "d"], ["a", "b", "d"], [1, 2, 3] ),
-            3
-        )
     
     def test_student_average_grade(self):
         self.assertEqual(
@@ -19,9 +13,9 @@ class gradesTests(unittest.TestCase):
                     "Alexandre": [["c", "c", "c"], ["c", "e", "c"]]
                 },
                 [["a", "b", "c"], ["a", "b", "c"]],
-                [[3,2,1], [3,2,1]]
+                [[7,2,1], [7,2,1]]
             ),
-            [3,2,1]
+            ["Cesar"]
         )
         
     def test_approval(self):

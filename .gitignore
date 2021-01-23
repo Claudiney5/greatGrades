@@ -1,5 +1,5 @@
 # created by virtualenv automatically
-__pycache__/
+/__pycache__
 .vscode
 /bin
 /lib
@@ -8,3 +8,5 @@ git_key
 key*
 pyvenv.cfg
 data.json
+/greatgrades
+Controllers/__pycache__
