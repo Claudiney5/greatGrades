@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Documentação para API greatGrades{% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>API greatGrades</h1>
+
+<h2>FUNCIONALIDADE</h2>
+
+<p>A API <em>greatGrades</em> é oferecida com a intenção de facilitar e agilizar o trabalho do professor, 
+realizando correções de provas por intermédio do fornecimento de gabaritos; cálculo do peso 
+diferenciado das questões; e, por fim, calculando a média de cada aluno e verificando quais 
+foram aprovados.</p>
+
+
+<h2>COLETA DAS INFORMAÇÕES</h2>
+
+<p>A transferência dos dados é feita usando protocolo HTTP, verbo GET e recebe os dados no formato JSON. 
+  <em>greatGrades</em> não tem limite de provas podendo ser utilizado para 
+  qualquer prova objetiva de gabarito fixo, independente do número de questões.</p> 
+
+<p>Abaixo exemplo de modelo JSON aceito:</p>
+
+<div class=" example ">
+<p>{</p>	
+  <p class="p1">"templates": [["a", "b", "c", "d"], ["a", "b", "c", "d", "e"]],</p>	
+	<p class="p1">"values": [[2, 3, 2, 3],	[3, 2, 1, 2, 2]],</p>
+	<p class="p1">"students": {</p>
+    <p class="p2">"Asterix":[["a", "b", "c", "d",], ["a", "c", "b", "d", "e"]],</p>	
+    <p class="p2">"Obelix": [["a", "b", "c", "d"], ["a", "c", "b", "d", "e"]],</p>	
+    <p class="p2">"Ideiafix": [["a", "b", "b", "d"], ["a", "b", "b", "d", "e"]],</p>	
+    <p class="p2">"Julius Caesar": [["a", "c", "b", "d"], ["a", "c", "b", "d", "e"]]</p>			
+    <p class="p1">}</p>	
+    <p>}</p>
+
+</div>
+
+<p>Os campos <strong>templates</strong>, <strong>values</strong> e <strong>students</strong> são obrigatórios, bem como o fornecimento 
+  de seus dados em vetores. Todavia, como dito, o funcionamento da API independe do número de 
+  vetores (número de provas) e da quantidade de dados (número de questões) neles.  
+</p>
+
+<p><em>greatGrades</em>  trabalha com avaliações com valor final 10 (dez). Isto obriga que cada vetor 
+  <strong>values</strong> somem 10 (dez) no somatório de seus pesos.</p>
+
+<h2>ENTREGA DO RESULTADO FINAL</h2>
+
+<p><em>greatGrades</em>  entrega como resultado uma lista de aprovados, também em JSON no 
+  seguinte formato:</p>
+
+  <div class=" example ">
+    <p>{</p>	
+      <p class="p1">"approved": [</p>
+        <p class="p2">"Mussum",</p>
+        <p class="p2">"Zacarias",</p>
+        <p class="p2">"Dedé"</p>
+      <p class="p1">]
+    <p>}</p>
+
+</div>
+
+<h2>MELHORAMENTOS</h2>
+
+<p>Relacionamos abaixo alguns melhoramentos possíveis e desejáveis:</p>
+<ul>
+  <li>seleção de médias diferentes de 7;</li>
+  <li>definição de pesos diferentes para provas;</li>
+  <li>divulgação de médias finais e relação dos estudantes reprovados.</li>
+</ul>
+
+</div>
+
+{% endblock %}

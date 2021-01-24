@@ -10,7 +10,8 @@ foram aprovados.
 # COLETA DAS INFORMAÇÕES
 
 A transferência dos dados é feita usando protocolo HTTP e recebe os dados no formato JSON. 
-_greatGrades_ não tem limite de provas nem de questões por provas.
+_greatGrades_ não tem limite de provas podendo ser utilizado para 
+  qualquer prova objetiva de gabarito fixo, independente do número de questões.
 
 Abaixo modelo JSON aceito:
 
@@ -26,12 +27,9 @@ Abaixo modelo JSON aceito:
 	}
 }
 ```
-Os campos __templates__, __values__ e __students__ são obrigatórios, bem como o fornecimento de seus 
-dados em vetores. Todavia, como dito, o funcionamento da API independe do número de vetores (número 
-de provas) e da quantidade de dados (número de questões) neles.  
+Os campos __templates__, __values__ e __students__ são obrigatórios, bem como o fornecimento de seus dados em vetores. Todavia, como dito, o funcionamento da API independe do número de vetores (número de provas) e da quantidade de dados (número de questões) neles.  
 
-_greatGrades_ trabalha com avaliações com valor final 10 (dez). Isto obriga que cada vetor __values__ somem 
-10 (dez) no conjunto de seus pesos.
+_greatGrades_ trabalha com avaliações com valor final 10 (dez). Isto obriga que cada vetor __values__ somem 10 (dez) no conjunto de seus pesos.
 
 # ENTREGA DO RESULTADO FINAL
 
@@ -51,6 +49,6 @@ _greatGrades_ entrega como resultado uma lista de aprovados, também em JSON no 
 Relacionamos abaixo alguns melhoramentos possíveis e desejáveis:
 - seleção de médias diferentes de 7;
 - definição de pesos diferentes para provas;
-- divulagação de médias finais e relacionamento dos estudantes reprovados.
+- divulagação de médias finais e relação dos estudantes reprovados.
 
 
