@@ -7,7 +7,7 @@ def student_average_grade(students, templates, values):
     responde com lista de aprovados'''
 
     if len(students) > 100:
-        return jsonify({'error': 'Limite máximo de estudantes: 100'}), 406
+        return {'error': 'Limite máximo de estudantes: 100'}
 
     averages = []
     for i in students:

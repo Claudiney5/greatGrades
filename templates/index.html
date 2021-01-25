@@ -9,16 +9,17 @@
 <h2>FUNCIONALIDADE</h2>
 
 <p>A API <em>greatGrades</em> é oferecida com a intenção de facilitar e agilizar o trabalho do professor, 
-realizando correções de provas por intermédio do fornecimento de gabaritos; cálculo do peso 
+realizando correções de avaliações por intermédio do fornecimento de gabaritos; cálculo do peso 
 diferenciado das questões; e, por fim, calculando a média de cada aluno e verificando quais 
-foram aprovados.</p>
+foram aprovados, isto é, atingiram média maior ou igual a 7 (sete).</p>
 
 
 <h2>COLETA DAS INFORMAÇÕES</h2>
 
 <p>A transferência dos dados é feita usando protocolo HTTP, verbo GET e recebe os dados no formato JSON. 
-  <em>greatGrades</em> não tem limite de provas podendo ser utilizado para 
-  qualquer prova objetiva de gabarito fixo, independente do número de questões.</p> 
+  O aplicativo será implantado na URL: <em>greatGrades.com.br</em>. Este documento estará disponível no <em>endpoint</em> em 
+  <em>greatGrades.com.br/docs</em>.  <em>greatGrades</em> não tem limite de provas podendo ser utilizado para 
+  qualquer avaliação objetiva de gabarito fixo, independente do número de questões.</p> 
 
 <p>Abaixo exemplo de modelo JSON aceito:</p>
 
@@ -38,7 +39,7 @@ foram aprovados.</p>
 
 <p>Os campos <strong>templates</strong>, <strong>values</strong> e <strong>students</strong> são obrigatórios, bem como o fornecimento 
   de seus dados em vetores. Todavia, como dito, o funcionamento da API independe do número de 
-  vetores (número de provas) e da quantidade de dados (número de questões) neles.  
+  vetores (número de avaliações) e da quantidade de dados (número de questões) neles. O número máximo de alunos é 100.  
 </p>
 
 <p><em>greatGrades</em>  trabalha com avaliações com valor final 10 (dez). Isto obriga que cada vetor 
@@ -65,7 +66,7 @@ foram aprovados.</p>
 <p>Relacionamos abaixo alguns melhoramentos possíveis e desejáveis:</p>
 <ul>
   <li>seleção de médias diferentes de 7;</li>
-  <li>definição de pesos diferentes para provas;</li>
+  <li>definição de pesos diferentes para cada avaliação;</li>
   <li>divulgação de médias finais e relação dos estudantes reprovados.</li>
 </ul>
 

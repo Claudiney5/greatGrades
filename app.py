@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, redirect, url_for, Response, render_template
+from flask import Flask, request, Response, render_template
 from controllers.grades import approval, student_average_grade
 import json
 
@@ -29,4 +29,4 @@ def examination():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

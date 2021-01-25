@@ -1,13 +1,11 @@
 import unittest
 import json
-from flask import Flask, jsonify, Response
-
+from flask import Flask
 
 from grades import approval, student_average_grade
 
 
 class gradesTests(unittest.TestCase):
-
    
     def test_student_average_grade(self):
         result=json.dumps({"approved":"Cesar"})
